@@ -1,0 +1,28 @@
+# Global owners
+* @ekiros
+
+# Frontend components
+/src/components/ @ekiros
+/src/pages/ @ekiros
+
+# Backend API
+/src/api/ @ekiros
+/src/services/ @ekiros
+
+# Configuration files
+*.json @ekiros
+*.yaml @ekiros
+*.yml @ekiros
+.env* @ekiros
+
+# Documentation
+/docs/ @ekiros
+README.md @ekiros
+
+# CI/CD and deployment
+/.github/ @ekiros
+/deploy/ @ekiros
+Dockerfile @ekiros
+docker-compose.yml @ekiros
+# Testing
+/tests/ @ekiros

@@ -1,0 +1,7 @@
+recursive-include search/configs *.yaml *.json
+recursive-include search/projects *.yaml *.json
+
+recursive-exclude search/datasets/download_scripts *
+recursive-exclude search/output *
+
+include requirements.txt
