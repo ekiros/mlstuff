@@ -25,7 +25,6 @@ logging.basicConfig(filename="intelli_llma_index.log",
 logger.setLevel("INFO")
 
 PERSIST_DIR = '/Users/ekiros/playground/intellisearch/llm_store/'
-os.environ['OPENAI_API_KEY'] = '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'
 
 def main(llm, query, completion, retrieve=False):  
 

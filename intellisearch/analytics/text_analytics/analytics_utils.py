@@ -13,13 +13,8 @@ import os, logging
 
 from llama_index.core import Settings
 
-#os.environ['OPENAI_API_KEY'] = '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'
-#os.environ['OPENAI_API_KEY_ADMIN'] ='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'
-#os.environ['DEEPSEEK_API_KEY'] = 'sk-fe30f22fd2d2457cb306e5f23977406c'
 
-#openai.api_key = os.getenv("OPENAI_API_KEY")
 #os.environ['http_proxy'] = 'http://127.0.0.1:7890'
-
 
 #os.environ['HF_HOME'] = '/home/intellisearch/.cache/huggingface'
 #os.environ['HF_DATASETS_CACHE'] = '/home/intellisearch/.cache/huggingface/datasets'

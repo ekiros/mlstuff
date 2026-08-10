@@ -29,7 +29,7 @@ def main():
 
     try:
         # authenticate
-        tenant_id = 'fcd2789a-0329-4b43-9655-d7b492d85245'
+        tenant_id = ''
 
         token = get_access_token_outlook(tenant_id)
         
@@ -46,10 +46,10 @@ def get_access_token_outlook(tenant_id):
 
     
     authority = f'https://login.microsoftonline.com/{tenant_id}'
-    client_id = '27e157e6-72fe-42b1-9626-50646ef62c99' #application ID
-    client_secret = '27e157e6-72fe-42b1-9626-50646ef62c99'
-    client_secret_val = 'K9r8Q~DhYGl0zEKKYiNtQxi7x6Tw3IGOVO6B3akK'
-    app_id = 'd6be7894-179c-448b-82fb-be5e6e656278'
+    client_id = '' #application ID
+    client_secret = ''
+    client_secret_val = ''
+    app_id = ''
     scope = ['https://outlook.office365.com/.default']
 
     try:
