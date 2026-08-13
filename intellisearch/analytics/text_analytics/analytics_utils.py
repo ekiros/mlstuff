@@ -8,8 +8,8 @@
  Provides a uniform interface for Search and Index so that they can use the right (or same) GPT Model and Embedder
 """
 
-import os, logging
-
+import os, logging, sys
+sys.path.insert(0, os.path.abspath(".."))
 
 from llama_index.core import Settings
 
@@ -47,6 +47,15 @@ EMBED_DIMENSION = 2048
 EMBED_BATCH_SIZE = 100
 
 
+def set_global_settings():
+    """
+    Set the global settings for the project
+    """
+    __set_basic_settings()
+
+    # NOTE: We are defaulting to a Local model (no commercial models)
+    get_current_llm_settings()
+
 def __set_basic_settings():
 
     #Settings.chunk_size = 1024
@@ -69,9 +78,19 @@ def __set_basic_settings():
     logger.info(f"Context window is set to {Settings.context_window}")
     logger.info(f"Number of outputs is set to {Settings.num_output}")
 
+"""
+Gets the currently set LLM and Embeddings
+"""
+def get_current_settings():
+    """
+    Returns the current LLM and Embedding model settings
+    """
+    return Settings
 
 def get_current_llm_settings():
-    """Setup LLM and embedding model based on the LLM selected. Returns a Settings() data"""
+    """
+    Setup LLM and embedding model based on the LLM selected. Returns a Settings() data
+    """
     
     llm_name = current_llm()
     __set_basic_settings()
@@ -151,11 +170,21 @@ def get_current_llm_settings():
 
 # NOTE: we are defaulting to a Local model (no commercial models)
 def current_llm():
-    """Returns the current LLM model"""
+    """
+    Returns the current LLM model
+    """
     return supported_llms()[2] 
 
 def supported_llms():
+    """
+    Get the supported LLM's as a tuple
+    """
     return ('openai', 'deepseek', 'local')
 
+
 def indexing_locations():
+    """
+    Get the supported Vector index storages as a tuple
+    """
+    # NOTE: We are not supporting Weaviate or Qdrant at this time
     return ('chromadb','files')

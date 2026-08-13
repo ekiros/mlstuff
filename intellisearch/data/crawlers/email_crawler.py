@@ -44,7 +44,7 @@ def main():
 def get_access_token_outlook(tenant_id):
     print("Getting access token for MS Outlook...")
 
-    
+    # TODO These will be stored in a secure location to be retrieved as needed
     authority = f'https://login.microsoftonline.com/{tenant_id}'
     client_id = '' #application ID
     client_secret = ''

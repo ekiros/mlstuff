@@ -3,9 +3,10 @@ Crawls regular files except image files which are handled by separate system
 We generally do not parse PDF files but store them as is for the indexer
 We also do not process simple text files (such as csv, tab, txt)
 
-Crawling will be done in one big batch initially and then will be incrmental.
-The incremental way will check for any new files added in any of the given 
-directories; or it will check for files that were modified since last run.
+Crawling will be done in one big batch initially and then will be incremental.
+The incremental way will check for any new files added/deleted/modified in any
+of the given directories. The file crawler will have a very well-defined configuration
+interface for people to be able to configure what get crawled, etc.
 '''
 
 import os, sys, re, time, shutil, pathlib, logging
