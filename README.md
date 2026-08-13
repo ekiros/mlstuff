@@ -1,4 +1,4 @@
-NOTE: These are mostly personal project and fun things that I worked on while trying not to imagine a world where unicorns rule. Please, do not consider these as a production quality sh**!
+NOTE: These are mostly personal projects and fun things that I worked on while trying not to imagine a world where unicorns rule. Please, do not consider these as a production quality sh**!
 A bunch of fun ML stuff here including...
 1) Simple Perceptron
 2) ADALine GD
